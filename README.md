@@ -1,36 +1,87 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🏗️ Onyx Auction: Pro Player Management System
 
-## Getting Started
+[![Next.js](https://img.shields.io/badge/Next.js-15-black?style=for-the-badge&logo=next.js)](https://nextjs.org/)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-4.0-38B2AC?style=for-the-badge&logo=tailwind-css)](https://tailwindcss.com/)
+[![Framer Motion](https://img.shields.io/badge/Framer_Motion-11.0-FF00C1?style=for-the-badge&logo=framer)](https://www.framer.com/motion/)
+[![Google Sheets](https://img.shields.io/badge/Google_Sheets-Data_Vault-34A853?style=for-the-badge&logo=google-sheets)](https://www.google.com/sheets/about/)
 
-First, run the development server:
+**Onyx Auction** is a ultra-premium, high-performance player auction management web application. Built for live offline auction events, it combines a sleek, interactive "Spin-the-Wheel" selection UI with real-time financial tracking and roster management.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+---
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## ✨ Features
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### 🎡 Dynamic Selection
+*   **Performance-First**: Custom HTML5 Canvas-based spinning wheel with realistic friction physics.
+*   **Audio Immersion**: Integrated tick sound effects and winner fanfares using the Web Audio API.
+*   **Visual Flair**: Canvas confetti and Framer Motion entrance animations for every winner.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### 📊 Real-Time Power-Sync
+*   **Three-Sheet Architecture**: Automatically maintains a Dashboard (Stats), Team Rosters (Grid View), and a Raw Ledger (Log) in Google Sheets via Apps Script.
+*   **Auto-Calculations**: Live SUMIF formulas handle spending, remaining purse, and squad counts instantly.
+*   **No-Cloud Setup**: Uses simple Web Apps Script middleware—no Google Cloud Service Accounts required.
 
-## Learn More
+### 💎 Premium Aesthetics
+*   **Onyx UI**: A sophisticated dark-slate theme with glassmorphism and radiant gradients.
+*   **Responsive**: Optimized for high-resolution displays (for big screens) and mobile devices.
+*   **Currency Support**: Native ₹ (Rupee) Lakhs formatting for the professional auction feel.
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 🛠️ Technology Stack
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+| Architecture | Tech |
+| :--- | :--- |
+| **Framework** | Next.js 15 (App Router) |
+| **Styling** | Tailwind CSS 4.0 |
+| **State Management** | Zustand with LocalStorage Persistence |
+| **Motion** | Framer Motion (Entrance & Gesture) |
+| **Backend** | Serverless Routes + Google Apps Script |
+| **Audio** | Custom Web Audio API Engine |
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 🚀 Getting Started
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### 1. Spreadsheet Preparation
+1. Create a new Google Spreadsheet.
+2. Go to **Extensions > Apps Script** and paste the code from [`lib/apps-script-master.js`](file:///Users/aditya/Developer/Web_dev/Onyx/opl/lib/apps-script-master.js).
+3. **Deploy** as a Web App (Execute as "Me", Access: "Anyone").
+4. Copy the **Web App URL**.
+
+### 2. Local Setup
+1. Clone this repository.
+2. Create `.env.local` and add your script URL:
+   ```bash
+   APPS_SCRIPT_URL=https://script.google.com/macros/s/.../exec
+   ```
+3. Install dependencies:
+   ```bash
+   npm install
+   ```
+4. Start the engine:
+   ```bash
+   npm run dev
+   ```
+
+### 3. Data Customization
+Edit [`data/players.json`](file:///Users/aditya/Developer/Web_dev/Onyx/opl/data/players.json) to add your own player lists, images, and roles. The app supports up to 8 different categories/lists.
+
+---
+
+## 📸 Dashboard Strategy
+
+We utilize a three-part synchronization strategy:
+1.  **Dashboard**: The primary stats hub ($ Spend, Rem, Count).
+2.  **Team Rosters**: A 2x2 side-by-side grid of squad tables.
+3.  **Auction Log**: The unchangeable source of truth.
+
+> [!TIP]
+> **Pro Tip**: If a data error occurs, simply edit the **Auction Log** tab. The Dashboard and Rosters will automatically recalculate!
+
+---
+
+## 📄 License
+Custom built for high-stakes auction management.
+
+*Built with ❤️ for the ultimate auction experience.*

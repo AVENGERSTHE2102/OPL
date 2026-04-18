@@ -1,0 +1,34 @@
+{
+  "lists": {
+    "List 1": [
+      { "id": "p1", "name": "Virat Kohli", "image": "https://images.unsplash.com/photo-1511367461989-f85a21fda167?w=400&h=400&fit=crop", "role": "Batsman", "basePrice": 200 },
+      { "id": "p2", "name": "Babar Azam", "image": "https://images.unsplash.com/photo-1511367461989-f85a21fda167?w=400&h=400&fit=crop", "role": "Batsman", "basePrice": 180 },
+      { "id": "p3", "name": "Rashid Khan", "image": "https://images.unsplash.com/photo-1511367461989-f85a21fda167?w=400&h=400&fit=crop", "role": "All-rounder", "basePrice": 150 },
+      { "id": "p4", "name": "Pat Cummins", "image": "https://images.unsplash.com/photo-1511367461989-f85a21fda167?w=400&h=400&fit=crop", "role": "Bowler", "basePrice": 190 },
+      { "id": "p5", "name": "Ben Stokes", "image": "https://images.unsplash.com/photo-1511367461989-f85a21fda167?w=400&h=400&fit=crop", "role": "All-rounder", "basePrice": 170 }
+    ],
+    "List 2": [
+      { "id": "p6", "name": "Rohit Sharma", "image": "https://images.unsplash.com/photo-1511367461989-f85a21fda167?w=400&h=400&fit=crop", "role": "Batsman", "basePrice": 190 },
+      { "id": "p7", "name": "Jasprit Bumrah", "image": "https://images.unsplash.com/photo-1511367461989-f85a21fda167?w=400&h=400&fit=crop", "role": "Bowler", "basePrice": 200 }
+    ],
+    "List 3": [
+      { "id": "p8", "name": "Kane Williamson", "image": "https://images.unsplash.com/photo-1511367461989-f85a21fda167?w=400&h=400&fit=crop", "role": "Batsman", "basePrice": 160 },
+      { "id": "p9", "name": "Mitchell Starc", "image": "https://images.unsplash.com/photo-1511367461989-f85a21fda167?w=400&h=400&fit=crop", "role": "Bowler", "basePrice": 185 }
+    ],
+    "List 4": [
+      { "id": "p10", "name": "Joe Root", "image": "https://images.unsplash.com/photo-1511367461989-f85a21fda167?w=400&h=400&fit=crop", "role": "Batsman", "basePrice": 155 }
+    ],
+    "List 5": [
+      { "id": "p11", "name": "Quinton de Kock", "image": "https://images.unsplash.com/photo-1511367461989-f85a21fda167?w=400&h=400&fit=crop", "role": "Wicketkeeper", "basePrice": 140 }
+    ],
+    "List 6": [
+      { "id": "p12", "name": "David Warner", "image": "https://images.unsplash.com/photo-1511367461989-f85a21fda167?w=400&h=400&fit=crop", "role": "Batsman", "basePrice": 150 }
+    ],
+    "List 7": [
+      { "id": "p13", "name": "Shubman Gill", "image": "https://images.unsplash.com/photo-1511367461989-f85a21fda167?w=400&h=400&fit=crop", "role": "Batsman", "basePrice": 120 }
+    ],
+    "List 8": [
+      { "id": "p14", "name": "Hardik Pandya", "image": "https://images.unsplash.com/photo-1511367461989-f85a21fda167?w=400&h=400&fit=crop", "role": "All-rounder", "basePrice": 175 }
+    ]
+  }
+}
