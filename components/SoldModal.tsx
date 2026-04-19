@@ -5,6 +5,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { Player } from '@/lib/types';
 import { X, Check } from 'lucide-react';
 import LoadingOverlay from './LoadingOverlay';
+import SafeImage from './SafeImage';
 
 interface SoldModalProps {
   player: Player;
@@ -51,7 +52,7 @@ const SoldModal: React.FC<SoldModalProps> = ({ player, onConfirm, onCancel }) =>
         <div className="flex justify-between items-start">
           <div className="flex gap-4 items-center">
             <div className="w-20 h-20 rounded-2xl overflow-hidden border-2 border-primary/30 flex-shrink-0">
-               <img 
+               <SafeImage 
                  src={player.image} 
                  alt={player.name}
                  className="w-full h-full object-cover object-[center_20%]"
@@ -81,7 +82,7 @@ const SoldModal: React.FC<SoldModalProps> = ({ player, onConfirm, onCancel }) =>
                 }`}
               >
                 <div className="w-16 h-16 rounded-xl overflow-hidden shadow-lg border border-white/10">
-                   <img src={team.logo} alt={team.name} className="w-full h-full object-cover" />
+                    <SafeImage src={team.logo} alt={team.name} className="w-full h-full object-cover" />
                 </div>
                 <span className={`font-bold ${selectedTeam === team.name ? 'text-primary' : 'text-white'}`}>
                   {team.name}

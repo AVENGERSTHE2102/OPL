@@ -6,7 +6,7 @@
       { "id": "p3", "name": "Ramkumar Nadar", "image": "/assets/players/ramkumar-nadar.jpg", "role": "Allrounder", "basePrice": 10000 },
       { "id": "p4", "name": "Sunny Chorge", "image": "/assets/players/sunny-chorge.jpg", "role": "Allrounder", "basePrice": 10000 },
       { "id": "p5", "name": "Sandeep Joshi", "image": "/assets/players/sandeep-joshi.jpg", "role": "Allrounder", "basePrice": 10000 },
-      { "id": "p6", "name": "Akshay Kankare", "image": "/assets/players/akshay-kankare.heic", "role": "Allrounder", "basePrice": 10000 },
+      { "id": "p6", "name": "Akshay Kankare", "image": "/assets/players/akshay-kankare.jpg", "role": "Allrounder", "basePrice": 10000 },
       { "id": "p7", "name": "Rohan Raut", "image": "/assets/players/rohan-raut.jpeg", "role": "Allrounder", "basePrice": 10000 },
       { "id": "p8", "name": "Rohit Kankare", "image": "/assets/players/rohit-kankare.jpg", "role": "Allrounder", "basePrice": 10000 }
     ],

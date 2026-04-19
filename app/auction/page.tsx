@@ -9,6 +9,8 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { ArrowLeft, Users, Trophy, Star } from 'lucide-react';
 import { sounds } from '@/lib/sounds';
 import confetti from 'canvas-confetti';
+import { usePreloadImages } from '@/hooks/usePreloadImages';
+import SafeImage from '@/components/SafeImage';
 
 export default function AuctionPage() {
   const router = useRouter();
@@ -25,12 +27,16 @@ export default function AuctionPage() {
   const [showSoldModal, setShowSoldModal] = useState(false);
   const [isHydrated, setIsHydrated] = useState(false);
 
+  const players = (activeListName && allLists && allLists[activeListName]) ? allLists[activeListName] : [];
+  
+  // Preload all images for current list
+  usePreloadImages(players);
+
   // Handle Zustand hydration
   useEffect(() => {
     setIsHydrated(true);
   }, []);
 
-  const players = (activeListName && allLists && allLists[activeListName]) ? allLists[activeListName] : [];
 
   // Redirect if no list is active or not hydrated yet
   useEffect(() => {
@@ -143,7 +149,7 @@ export default function AuctionPage() {
                 <div className="p-8 space-y-8">
                   <div className="relative aspect-square w-full max-w-[300px] mx-auto group">
                     <div className="absolute inset-0 bg-primary/20 blur-[50px] opacity-50 group-hover:opacity-100 transition-opacity" />
-                    <img 
+                    <SafeImage 
                       src={selectedPlayer.image} 
                       alt={selectedPlayer.name}
                       className="w-full h-full object-cover object-[center_20%] rounded-3xl border-2 border-white/10 relative z-10"
