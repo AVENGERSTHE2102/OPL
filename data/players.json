@@ -24,7 +24,7 @@
     ],
     "List 4": [
       { "id": "p17", "name": "Nayan Thakur", "image": "/assets/players/nayan-thakur.jpg", "role": "Allrounder", "basePrice": 3000 },
-      { "id": "p18", "name": "Siddhesh Raut", "image": "/assets/players/siddhesh-raut.jpg", "role": "Allrounder", "basePrice": 3000 },
+      { "id": "p18", "name": "Siddhesh Raut", "image": "opl/imgs of plauer/siddesh raut.jpeg", "role": "Allrounder", "basePrice": 3000 },
       { "id": "p19", "name": "Akash Dhole", "image": "/assets/players/akash-dhole.jpeg", "role": "Allrounder", "basePrice": 3000 },
       { "id": "p20", "name": "Shubham Yadav", "image": "/assets/players/shubham-yadav.jpeg", "role": "Allrounder", "basePrice": 3000 }
     ],
