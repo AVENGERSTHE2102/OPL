@@ -146,7 +146,7 @@ export default function AuctionPage() {
                     <img 
                       src={selectedPlayer.image} 
                       alt={selectedPlayer.name}
-                      className="w-full h-full object-cover rounded-3xl border-2 border-white/10 relative z-10"
+                      className="w-full h-full object-cover object-[center_20%] rounded-3xl border-2 border-white/10 relative z-10"
                     />
                   </div>
 
@@ -154,7 +154,7 @@ export default function AuctionPage() {
                     <h2 className="text-5xl font-black text-white italic tracking-tighter uppercase">{selectedPlayer.name}</h2>
                     <p className="text-primary text-xl font-bold uppercase tracking-[0.2em]">{selectedPlayer.role}</p>
                     {selectedPlayer.basePrice && (
-                       <p className="text-muted-foreground text-lg">Base Price: ₹ {selectedPlayer.basePrice} Lakhs</p>
+                       <p className="text-muted-foreground text-lg">Base Price: {selectedPlayer.basePrice} Points</p>
                     )}
                   </div>
 

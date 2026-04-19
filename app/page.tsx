@@ -1,31 +1,42 @@
 'use client';
 
+import { useState, useEffect } from 'react';
+import { useRouter } from 'next/navigation';
 import { useAuctionStore } from '@/lib/store';
 import { getPlayersData } from '@/lib/data-loader';
-import { useRouter } from 'next/navigation';
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import { Trophy, Users, ChevronRight } from 'lucide-react';
-import { useEffect } from 'react';
+import LoadingOverlay from '@/components/LoadingOverlay';
 
-const LIST_KEYS = ['List 1', 'List 2', 'List 3', 'List 4', 'List 5', 'List 6', 'List 7', 'List 8'];
+const LIST_KEYS = ['List 1', 'List 2', 'List 3', 'List 4', 'List 5', 'List 6', 'List 7'];
 
 export default function LandingPage() {
   const router = useRouter();
   const { allLists, initializeLists, setActiveList } = useAuctionStore();
+  const [isLoading, setIsLoading] = useState(true);
   
   // Initialize from JSON on first mount
   useEffect(() => {
     const rawData = getPlayersData();
-    initializeLists(rawData);
+    const init = async () => {
+      await initializeLists(rawData);
+      setIsLoading(false);
+    };
+    init();
   }, [initializeLists]);
 
   const handleListSelect = (listName: string) => {
+    if (isLoading) return;
     setActiveList(listName);
     router.push('/auction');
   };
 
   return (
     <main className="flex-1 flex flex-col items-center justify-center p-6 md:p-12 relative overflow-hidden">
+      <AnimatePresence>
+        {isLoading && <LoadingOverlay message="Establishing Sync with OPL Cloud..." />}
+      </AnimatePresence>
+
       {/* Background decoration */}
       <div className="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] bg-primary/10 rounded-full blur-[120px]" />
       <div className="absolute bottom-[-10%] right-[-10%] w-[40%] h-[40%] bg-secondary/10 rounded-full blur-[120px]" />

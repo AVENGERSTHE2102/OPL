@@ -1,0 +1,15 @@
+# Antigravity Global Rules for Onyx Auction
+
+## Data Persistence & Source of Truth
+- **Single Source of Truth**: Always prioritize Google Sheets as the master database over local `localStorage` or `Zustand` persistence.
+- **Centralized State**: For multi-user environments, fetch the "Available Players" list directly from the Sheets API on app initialization to prevent duplicate draws/sales.
+- **Race Condition Prevention**: Implement server-side status checks in Google Apps Script during the "Sold" process to ensure a player hasn't already been assigned by another user.
+
+## Design Philosophy
+- **Premium Dark Aesthetics Only**: Maintain the Onyx-Slate glassmorphism design system.
+- **Point-Based Budgeting**: All financial calculations must use "Points" as the unit (no currency symbols).
+- **Responsive Portrait Framing**: Ensure player images always use `object-top` or `object-[center_20%]` to keep faces visible.
+
+## Development Workflow
+- **No Patchwork**: Solve root causes by updating the Apps Script middleware rather than adding client-side hacks.
+- **Sync Integrity**: Always ensure the `Dashboard`, `Roster`, and `Log` sheets remain in sync after every transaction.

@@ -3,7 +3,8 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Player } from '@/lib/types';
-import { X, Check, DollarSign } from 'lucide-react';
+import { X, Check } from 'lucide-react';
+import LoadingOverlay from './LoadingOverlay';
 
 interface SoldModalProps {
   player: Player;
@@ -12,10 +13,10 @@ interface SoldModalProps {
 }
 
 const TEAMS = [
-  { id: 't1', name: 'Onyx Strikers', color: 'bg-amber-500' },
-  { id: 't2', name: 'Onyx Rangers', color: 'bg-emerald-500' },
-  { id: 't3', name: 'Onyx Titans', color: 'bg-blue-600' },
-  { id: 't4', name: 'Onyx Nemeses', color: 'bg-rose-600' },
+  { id: 't1', name: 'Onyx Strikers', color: 'bg-amber-500', logo: '/assets/teams/strikers.jpeg' },
+  { id: 't2', name: 'Onyx Rangers', color: 'bg-emerald-500', logo: '/assets/teams/rangers.jpeg' },
+  { id: 't3', name: 'Onyx Titans', color: 'bg-blue-600', logo: '/assets/teams/titans.jpeg' },
+  { id: 't4', name: 'Onyx Nemeses', color: 'bg-rose-600', logo: '/assets/teams/nemesis.jpeg' },
 ];
 
 const SoldModal: React.FC<SoldModalProps> = ({ player, onConfirm, onCancel }) => {
@@ -36,6 +37,11 @@ const SoldModal: React.FC<SoldModalProps> = ({ player, onConfirm, onCancel }) =>
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-md">
+      <AnimatePresence>
+        {isSubmitting && (
+          <LoadingOverlay message={`Recording ${player.name} to Sheets...`} />
+        )}
+      </AnimatePresence>
       <motion.div
         initial={{ opacity: 0, scale: 0.9, y: 20 }}
         animate={{ opacity: 1, scale: 1, y: 0 }}
@@ -43,9 +49,18 @@ const SoldModal: React.FC<SoldModalProps> = ({ player, onConfirm, onCancel }) =>
         className="glass-card w-full max-w-lg p-8 space-y-8 border border-white/10"
       >
         <div className="flex justify-between items-start">
-          <div>
-            <h2 className="text-3xl font-black text-white uppercase tracking-tighter italic">Process Sale</h2>
-            <p className="text-muted-foreground">Assigning {player.name} to a team</p>
+          <div className="flex gap-4 items-center">
+            <div className="w-20 h-20 rounded-2xl overflow-hidden border-2 border-primary/30 flex-shrink-0">
+               <img 
+                 src={player.image} 
+                 alt={player.name}
+                 className="w-full h-full object-cover object-[center_20%]"
+               />
+            </div>
+            <div>
+              <h2 className="text-3xl font-black text-white uppercase tracking-tighter italic">Process Sale</h2>
+              <p className="text-muted-foreground">{player.name} • {player.role}</p>
+            </div>
           </div>
           <button onClick={onCancel} className="p-2 hover:bg-white/10 rounded-full transition-colors">
             <X className="w-6 h-6 text-muted-foreground" />
@@ -65,7 +80,9 @@ const SoldModal: React.FC<SoldModalProps> = ({ player, onConfirm, onCancel }) =>
                     : 'border-white/5 bg-white/5 hover:border-white/20'
                 }`}
               >
-                <div className={`w-12 h-12 rounded-full ${team.color} shadow-lg`} />
+                <div className="w-16 h-16 rounded-xl overflow-hidden shadow-lg border border-white/10">
+                   <img src={team.logo} alt={team.name} className="w-full h-full object-cover" />
+                </div>
                 <span className={`font-bold ${selectedTeam === team.name ? 'text-primary' : 'text-white'}`}>
                   {team.name}
                 </span>
@@ -80,10 +97,10 @@ const SoldModal: React.FC<SoldModalProps> = ({ player, onConfirm, onCancel }) =>
         </div>
 
         <div className="space-y-4">
-          <label className="text-sm font-bold text-muted-foreground uppercase tracking-widest">Final Price (₹ Lakhs)</label>
+          <label className="text-sm font-bold text-muted-foreground uppercase tracking-widest">Final Price (Points)</label>
           <div className="relative">
             <div className="absolute left-4 top-1/2 -translate-y-1/2">
-              <span className="text-2xl font-black text-primary">₹</span>
+              <span className="text-2xl font-black text-primary">Pts</span>
             </div>
             <input
               type="number"

@@ -128,13 +128,18 @@ const SpinWheel: React.FC<SpinWheelProps> = ({ items, onFinished, isSpinning, se
           return next;
         });
 
-        setVelocity(prev => prev * 0.992); // Friction
+        setVelocity(prev => {
+          // Add a tiny random jitter to friction for uniqueness
+          const friction = 0.99 + (Math.random() * 0.005);
+          return prev * friction;
+        });
 
-        if (velocity < 0.005) {
+        if (velocity < 0.002) {
           setIsSpinning(false);
           setVelocity(0);
           
           const angleStep = (2 * Math.PI) / items.length;
+          // Exact calculation for the pointer at the right (0 rad)
           let winningIndex = Math.floor((2 * Math.PI - (rotation % (2 * Math.PI))) / angleStep) % items.length;
           if (winningIndex < 0) winningIndex += items.length;
           
@@ -153,7 +158,13 @@ const SpinWheel: React.FC<SpinWheelProps> = ({ items, onFinished, isSpinning, se
 
   const spin = () => {
     if (isSpinning || items.length === 0) return;
-    const initialVelocity = 0.4 + Math.random() * 0.3;
+    
+    // Wider velocity range for more diverse results
+    const initialVelocity = 0.35 + (Math.random() * 0.4);
+    
+    // Add a random push to rotation to break initial patterns
+    setRotation(prev => prev + (Math.random() * Math.PI));
+    
     setVelocity(initialVelocity);
     setIsSpinning(true);
   };

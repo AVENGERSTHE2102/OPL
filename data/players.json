@@ -1,34 +1,50 @@
 {
   "lists": {
     "List 1": [
-      { "id": "p1", "name": "Virat Kohli", "image": "https://images.unsplash.com/photo-1511367461989-f85a21fda167?w=400&h=400&fit=crop", "role": "Batsman", "basePrice": 200 },
-      { "id": "p2", "name": "Babar Azam", "image": "https://images.unsplash.com/photo-1511367461989-f85a21fda167?w=400&h=400&fit=crop", "role": "Batsman", "basePrice": 180 },
-      { "id": "p3", "name": "Rashid Khan", "image": "https://images.unsplash.com/photo-1511367461989-f85a21fda167?w=400&h=400&fit=crop", "role": "All-rounder", "basePrice": 150 },
-      { "id": "p4", "name": "Pat Cummins", "image": "https://images.unsplash.com/photo-1511367461989-f85a21fda167?w=400&h=400&fit=crop", "role": "Bowler", "basePrice": 190 },
-      { "id": "p5", "name": "Ben Stokes", "image": "https://images.unsplash.com/photo-1511367461989-f85a21fda167?w=400&h=400&fit=crop", "role": "All-rounder", "basePrice": 170 }
+      { "id": "p1", "name": "Ninad Parab", "image": "/assets/players/ninad-parab.jpeg", "role": "Allrounder", "basePrice": 10000 },
+      { "id": "p2", "name": "Sanjay Chorge", "image": "/assets/players/sanjay-chorge.jpeg", "role": "Allrounder", "basePrice": 10000 },
+      { "id": "p3", "name": "Ramkumar Nadar", "image": "/assets/players/ramkumar-nadar.jpg", "role": "Allrounder", "basePrice": 10000 },
+      { "id": "p4", "name": "Sunny Chorge", "image": "/assets/players/sunny-chorge.jpg", "role": "Allrounder", "basePrice": 10000 },
+      { "id": "p5", "name": "Sandeep Joshi", "image": "/assets/players/sandeep-joshi.jpg", "role": "Allrounder", "basePrice": 10000 },
+      { "id": "p6", "name": "Akshay Kankare", "image": "/assets/players/akshay-kankare.heic", "role": "Allrounder", "basePrice": 10000 },
+      { "id": "p7", "name": "Rohan Raut", "image": "/assets/players/rohan-raut.jpeg", "role": "Allrounder", "basePrice": 10000 },
+      { "id": "p8", "name": "Rohit Kankare", "image": "/assets/players/rohit-kankare.jpg", "role": "Allrounder", "basePrice": 10000 }
     ],
     "List 2": [
-      { "id": "p6", "name": "Rohit Sharma", "image": "https://images.unsplash.com/photo-1511367461989-f85a21fda167?w=400&h=400&fit=crop", "role": "Batsman", "basePrice": 190 },
-      { "id": "p7", "name": "Jasprit Bumrah", "image": "https://images.unsplash.com/photo-1511367461989-f85a21fda167?w=400&h=400&fit=crop", "role": "Bowler", "basePrice": 200 }
+      { "id": "p9", "name": "Bharat Jain", "image": "/assets/players/bharat-jain.jpg", "role": "Allrounder", "basePrice": 5000 },
+      { "id": "p10", "name": "Cristo John", "image": "/assets/players/cristo-john.jpeg", "role": "Allrounder", "basePrice": 5000 },
+      { "id": "p11", "name": "Deepak Mandvkar", "image": "/assets/players/deepak-mandvkar.jpg", "role": "Allrounder", "basePrice": 5000 },
+      { "id": "p12", "name": "Hrithik Mestry", "image": "/assets/players/hrithik-mestry.jpeg", "role": "Allrounder", "basePrice": 5000 }
     ],
     "List 3": [
-      { "id": "p8", "name": "Kane Williamson", "image": "https://images.unsplash.com/photo-1511367461989-f85a21fda167?w=400&h=400&fit=crop", "role": "Batsman", "basePrice": 160 },
-      { "id": "p9", "name": "Mitchell Starc", "image": "https://images.unsplash.com/photo-1511367461989-f85a21fda167?w=400&h=400&fit=crop", "role": "Bowler", "basePrice": 185 }
+      { "id": "p13", "name": "Yash Bhagwat", "image": "/assets/players/placeholder.png", "role": "Allrounder", "basePrice": 3000 },
+      { "id": "p14", "name": "Amol Liddad", "image": "/assets/players/amol-liddad.jpeg", "role": "Allrounder", "basePrice": 3000 },
+      { "id": "p15", "name": "Pragyam Jain", "image": "/assets/players/pragyam-jain.jpg", "role": "Allrounder", "basePrice": 3000 },
+      { "id": "p16", "name": "Sangram Patekar", "image": "/assets/players/sangram-patekar.jpeg", "role": "Allrounder", "basePrice": 3000 }
     ],
     "List 4": [
-      { "id": "p10", "name": "Joe Root", "image": "https://images.unsplash.com/photo-1511367461989-f85a21fda167?w=400&h=400&fit=crop", "role": "Batsman", "basePrice": 155 }
+      { "id": "p17", "name": "Nayan Thakur", "image": "/assets/players/nayan-thakur.jpg", "role": "Allrounder", "basePrice": 3000 },
+      { "id": "p18", "name": "Siddhesh Raut", "image": "/assets/players/siddhesh-raut.jpg", "role": "Allrounder", "basePrice": 3000 },
+      { "id": "p19", "name": "Akash Dhole", "image": "/assets/players/akash-dhole.jpeg", "role": "Allrounder", "basePrice": 3000 },
+      { "id": "p20", "name": "Shubham Yadav", "image": "/assets/players/shubham-yadav.jpeg", "role": "Allrounder", "basePrice": 3000 }
     ],
     "List 5": [
-      { "id": "p11", "name": "Quinton de Kock", "image": "https://images.unsplash.com/photo-1511367461989-f85a21fda167?w=400&h=400&fit=crop", "role": "Wicketkeeper", "basePrice": 140 }
+      { "id": "p21", "name": "Vijay Chemmandaparambil", "image": "/assets/players/vijay-c.jpg", "role": "Bowler", "basePrice": 3000 },
+      { "id": "p22", "name": "Yash Yeri", "image": "/assets/players/yash-yeri.jpg", "role": "Bowler", "basePrice": 3000 },
+      { "id": "p23", "name": "Manish Yadav", "image": "/assets/players/manish-yadav.jpg", "role": "Bowler", "basePrice": 3000 },
+      { "id": "p24", "name": "Ranjeet Yadav", "image": "/assets/players/ranjeet-yadav.jpg", "role": "Bowler", "basePrice": 3000 }
     ],
     "List 6": [
-      { "id": "p12", "name": "David Warner", "image": "https://images.unsplash.com/photo-1511367461989-f85a21fda167?w=400&h=400&fit=crop", "role": "Batsman", "basePrice": 150 }
+      { "id": "p25", "name": "Krunal Panchal", "image": "/assets/players/krunal-panchal.jpeg", "role": "Player", "basePrice": 2000 },
+      { "id": "p26", "name": "Shashikant Yadav", "image": "/assets/players/shashikant-yadav.jpg", "role": "Player", "basePrice": 2000 },
+      { "id": "p27", "name": "Harshal Jadhav", "image": "/assets/players/harshal-jadhav.jpeg", "role": "Player", "basePrice": 2000 },
+      { "id": "p28", "name": "Kishan Chauhan", "image": "/assets/players/kisan-chauhan.jpg", "role": "Player", "basePrice": 2000 }
     ],
     "List 7": [
-      { "id": "p13", "name": "Shubman Gill", "image": "https://images.unsplash.com/photo-1511367461989-f85a21fda167?w=400&h=400&fit=crop", "role": "Batsman", "basePrice": 120 }
-    ],
-    "List 8": [
-      { "id": "p14", "name": "Hardik Pandya", "image": "https://images.unsplash.com/photo-1511367461989-f85a21fda167?w=400&h=400&fit=crop", "role": "All-rounder", "basePrice": 175 }
+      { "id": "p29", "name": "Aditya Sabnis", "image": "/assets/players/aditya-sabnis.jpg", "role": "Player", "basePrice": 2000 },
+      { "id": "p30", "name": "Om Joshi", "image": "/assets/players/om-joshi.jpg", "role": "Player", "basePrice": 2000 },
+      { "id": "p31", "name": "Sandesh Salunke", "image": "/assets/players/sandesh-salunke.jpeg", "role": "Player", "basePrice": 2000 },
+      { "id": "p32", "name": "Mukesh Gondhale", "image": "/assets/players/mukesh-gondhale.jpg", "role": "Player", "basePrice": 2000 }
     ]
   }
 }

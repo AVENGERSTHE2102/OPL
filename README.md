@@ -24,7 +24,7 @@
 ### 💎 Premium Aesthetics
 *   **Onyx UI**: A sophisticated dark-slate theme with glassmorphism and radiant gradients.
 *   **Responsive**: Optimized for high-resolution displays (for big screens) and mobile devices.
-*   **Currency Support**: Native ₹ (Rupee) Lakhs formatting for the professional auction feel.
+*   **Currency Support**: Native Points formatting for the professional auction feel.
 
 ---
 
